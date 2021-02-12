@@ -56,3 +56,23 @@ function mostrarError(mensaje) {
 		}, 5000);
 	}
 }
+
+function consultarAPI(ciudad, pais) {
+	const apiID = '30ea7acda9d153d3523f3508b528e624';
+	const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apiID}`;
+
+	Spinner();
+	fetch(url)
+		.then((respuesta) => respuesta.json())
+		.then((datos) => {
+			console.log(datos);
+
+			limpiarHTML();
+			if (datos.cod === '404') {
+				mostrarError('Cuidad no encontrada');
+				return;
+			}
+			// imprimir en el html
+			mostrarClima(datos);
+		});
+}
