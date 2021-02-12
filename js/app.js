@@ -111,3 +111,5 @@ function mostrarClima(datos) {
 
 	resultado.appendChild(resultadoDiv);
 }
+
+const kelvinAcentigrados = (temp) => parseInt(temp - 273.15);
