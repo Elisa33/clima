@@ -113,3 +113,9 @@ function mostrarClima(datos) {
 }
 
 const kelvinAcentigrados = (temp) => parseInt(temp - 273.15);
+
+function limpiarHTML() {
+	while (resultado.firstChild) {
+		resultado.removeChild(resultado.firstChild);
+	}
+}
