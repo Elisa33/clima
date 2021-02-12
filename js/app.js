@@ -119,3 +119,14 @@ function limpiarHTML() {
 		resultado.removeChild(resultado.firstChild);
 	}
 }
+
+function Spinner() {
+	limpiarHTML();
+	const divSpiner = document.createElement('div');
+	divSpiner.classList.add('spinner');
+	divSpiner.innerHTML = `
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+    `;
+	resultado.appendChild(divSpiner);
+}
