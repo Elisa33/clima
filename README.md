@@ -3,4 +3,4 @@ study project
 
 
 Technologies:
-* react
+* modern js
